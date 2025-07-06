@@ -1,6 +1,6 @@
-# PDF RAG with DeepSeek
+# PDF RAG with LangChain
 
-This project implements a Retrieval-Augmented Generation (RAG) system for PDF documents using locally hosted DeepSeek model through Ollama.
+This project implements a Retrieval-Augmented Generation (RAG) system for PDF documents using LangChain. It supports both local DeepSeek models via Ollama and OpenAI's ChatGPT as language model backends. Chroma is used for efficient vector storage and retrieval, enabling you to query and chat with the content of your PDF files.
 
 ## Setup
 
@@ -90,7 +90,7 @@ python pdf_rag.py
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.9+
 - PyPDF2 for PDF reading
 - Chroma for vector storage (via langchain-community)
 - LangChain for RAG implementation
