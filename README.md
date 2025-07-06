@@ -5,7 +5,7 @@ This project implements a Retrieval-Augmented Generation (RAG) system for PDF do
 ## Setup
 
 1. (Only if using Ollama backend) Install Ollama:
-   - Required only if you set `LLM_SERVICE=ollama` (the default).
+   - Required only if you set `LLM_SERVICE=ollama`.
 ```bash
 # Install Ollama
 curl https://ollama.ai/install.sh | sh
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 You can select which language model backend to use by setting the `LLM_SERVICE` variable in your `.env` file:
 
-- `LLM_SERVICE=ollama` (default): Uses the local DeepSeek model served by Ollama. No API key or internet required. **Ollama must be installed and running in this mode.**
+- `LLM_SERVICE=ollama` : Uses the local DeepSeek model served by Ollama. No API key or internet required. **Ollama must be installed and running in this mode.**
 - `LLM_SERVICE=chatgpt`: Uses OpenAI's ChatGPT API. Requires a valid `OPENAI_API_KEY` and an internet connection. **Ollama is not required in this mode.**
 
 > **Note:** The Ollama service is required only when using the `ollama` backend. For ChatGPT, you can skip all Ollama-related steps.
