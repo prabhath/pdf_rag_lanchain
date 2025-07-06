@@ -134,10 +134,18 @@ if __name__ == "__main__":
     print("PDF RAG Chatbot")
     print("================")
 
-    # Feature flag for LLM service
-    llm_service = None
-    while llm_service not in ("ollama", "chatgpt"):
-        llm_service = input("Choose LLM service ('ollama' or 'chatgpt'): ").strip().lower()
+    # Check for LLM_SERVICE in environment; if not set, ask the user
+    llm_service = os.getenv("LLM_SERVICE")
+    if llm_service is not None:
+        llm_service = llm_service.strip().lower()
+        if llm_service not in ("ollama", "chatgpt"):
+            print("Invalid LLM_SERVICE in .env; must be 'ollama' or 'chatgpt'.")
+            exit(1)
+        print(f"Using LLM service from .env: {llm_service}")
+    else:
+        while llm_service not in ("ollama", "chatgpt"):
+            llm_service = input("Choose LLM service ('ollama' or 'chatgpt'): ").strip().lower()
+        print(f"Using LLM service: {llm_service}")
 
     # Always use files.txt for PDF paths
     pdf_paths = PDFRAG.get_pdf_list()
