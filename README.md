@@ -73,9 +73,13 @@ python pdf_rag.py
 4. The script will:
    - Read the PDF
    - Split the text into chunks
-   - Create embeddings using DeepSeek
+   - Create embeddings using a local sentence-transformers model (via HuggingFaceEmbeddings)
    - Store them in a Chroma vector store
    - Allow you to ask questions about the PDF content
+
+**About Embeddings:**
+
+Embeddings are numerical vector representations of text chunks, generated using a local model from the sentence-transformers library (accessed via HuggingFaceEmbeddings). These embeddings capture the semantic meaning of the text and are stored in Chroma for efficient similarity search and retrieval. The language model (DeepSeek or ChatGPT) is then used to answer your questions based on the most relevant retrieved chunks.
 
 ## Features
 
