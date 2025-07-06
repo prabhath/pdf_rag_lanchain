@@ -74,7 +74,7 @@ python pdf_rag.py
    - Read the PDF
    - Split the text into chunks
    - Create embeddings using DeepSeek
-   - Store them in a FAISS vector store
+   - Store them in a Chroma vector store
    - Allow you to ask questions about the PDF content
 
 ## Features
