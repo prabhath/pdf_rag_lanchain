@@ -24,7 +24,6 @@ pip install -r requirements.txt
    - Create a `.env` file in the project root
    - "OPENAI_API_KEY=your_openai_api_key_here"
    - Replace `your_openai_api_key_here` with your actual OpenAI API key
-   - ⚠️ **Important**: Never commit the `.env` file to version control. It's already added to `.gitignore` for security.
 
 4. Configure PDF files:
    - Create or edit the `files.txt` file in the project root
